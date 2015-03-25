@@ -6,7 +6,7 @@
 Summary:	Library for working with Cue Sheet (cue) and Table of Contents (toc) files
 Name:		libcuefile
 Version:	0.0.1.r%{rev}
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		Libraries
 Source0:	http://files.musepack.net/source/%{name}_r%{rev}.tar.gz
