@@ -1,0 +1,11 @@
+--- a/src/cue_parse.c	2011-06-18 07:28:43.000000000 +0000
++++ b/src/cue_parse.c	2024-01-01 00:00:00.000000000 +0000
+@@ -1513,6 +1513,8 @@ void yyerror (char *s)
+ 	fprintf(stderr, "%d: %s\n", cue_lineno, s);
+ }
+
++void cue_delete_buffer(void);
++
+ Cd *cue_parse (FILE *fp)
+ {
+ 	cue_yyin = fp;

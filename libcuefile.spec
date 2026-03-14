@@ -7,12 +7,13 @@ Summary:	Library for working with Cue Sheet (cue) and Table of Contents (toc) fi
 Summary(pl.UTF-8):	Biblioteka do pracy z plikami Cue Sheet (cue) oraz Table of Contents (toc)
 Name:		libcuefile
 Version:	0.0.1.r%{rev}
-Release:	2
+Release:	3
 License:	GPL v2+
 Group:		Libraries
 #Source0Download: https://www.musepack.net/index.php?pg=src
 Source0:	https://files.musepack.net/source/%{name}_r%{rev}.tar.gz
 # Source0-md5:	1a6ac52e1080fd54f0f59372345f1e4e
+Patch0:		%{name}-c99.patch
 URL:		https://www.musepack.net/
 BuildRequires:	cmake >= 2.4
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -51,6 +52,7 @@ Statyczna wersja biblioteki CUE File.
 
 %prep
 %setup -q -n libcuefile_r%{rev}
+%patch -P0 -p1
 
 %build
 %cmake
